@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Alien Invasion</title>
+  <link rel="icon" type="image/png" href="images/ship.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="header-bar">
+      <h1>ALIEN INVASION</h1>
+      <p class="subtitle">Defend Earth from the plummeting alien swarm!</p>
+    </div>
+
+    <div class="canvas-container">
+      <canvas id="gameCanvas" width="1200" height="800"></canvas>
+    </div>
+
+    <!-- On-screen mobile/touch controls -->
+    <div class="mobile-controls" id="mobileControls">
+      <div class="dpad">
+        <button id="btnLeft" class="ctrl-btn" aria-label="Move Left">&#9664;</button>
+        <button id="btnRight" class="ctrl-btn" aria-label="Move Right">&#9654;</button>
+      </div>
+      <div class="action-btn-container">
+        <button id="btnFire" class="ctrl-btn fire-btn" aria-label="Fire Bullet">&#128293; FIRE</button>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <div class="instruction-badge"><kbd>&larr;</kbd> <kbd>&rarr;</kbd> or <kbd>A</kbd> <kbd>D</kbd> Move Ship</div>
+      <div class="instruction-badge"><kbd>Space</kbd> Fire Rocket</div>
+      <div class="instruction-badge"><kbd>P</kbd> Play / Restart</div>
+      <div class="instruction-badge"><kbd>M</kbd> Toggle Sound</div>
+    </div>
+
+    <footer class="game-footer">
+      <p>Original Pygame project by <a href="https://github.com/KapilDhwaj/Alien_Invasion" target="_blank" rel="noopener">Kapil Dhwaj</a> &bull; Deployed on <a href="https://vercel.com" target="_blank" rel="noopener">Vercel</a></p>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

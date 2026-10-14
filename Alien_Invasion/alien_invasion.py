@@ -1,4 +1,5 @@
 import sys
+import asyncio
 from time import sleep
 import pygame
 from settings import Settings
@@ -32,7 +33,7 @@ class AlienInvasion:
         self.game_active = False
         # Make the Play button.
         self.play_button = Button(self, "Play")
-    def run_game(self):
+    async def run_game(self):
         """Start the main loop for the game."""
         while True:
             self._check_events()
@@ -42,6 +43,7 @@ class AlienInvasion:
                 self._update_aliens()
             self._update_screen()
             self.clock.tick(144)
+            await asyncio.sleep(0)
             
     # Watch for keyboard and mouse events.
     def _check_events(self):
@@ -225,7 +227,9 @@ class AlienInvasion:
         # Make the most recently drawn screen visible.
         pygame.display.flip()
         
-if __name__ == '__main__' :
-    # Make a game instance, and run the game.
+async def main():
     ai = AlienInvasion()
-    ai.run_game()
+    await ai.run_game()
+
+if __name__ == '__main__':
+    asyncio.run(main())
