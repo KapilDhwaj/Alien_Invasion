@@ -42,7 +42,7 @@ class AlienInvasion:
                 self._update_bullets()
                 self._update_aliens()
             self._update_screen()
-            self.clock.tick(144)
+            self.clock.tick(60)
             await asyncio.sleep(0)
             
     # Watch for keyboard and mouse events.
